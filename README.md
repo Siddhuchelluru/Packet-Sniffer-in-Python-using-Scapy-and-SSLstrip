@@ -5,9 +5,13 @@ This is a packet sniffer implementation in Python that allows you to capture and
 To use this code, you will need the following:
 
 Python 3.6 or later
-The Scapy library, which you can install using pip install scapy
+The Scapy library, which you can install 
+      
+    pip install scapy
 
-The SSLstrip tool, which you can install using pip install sslstrip
+The SSLstrip tool, which you can install 
+
+    pip install sslstrip
 
 Root privileges to run the packet sniffer on a network interface (you can use sudo to run the script with root privileges)
 
@@ -17,7 +21,8 @@ Save the code to a file, such as packet_sniffer.py.
 Run the script with the -i flag to specify the network interface to sniff on, and optional -f, -o, and -t flags to specify a BPF filter, output file, and network tap device. 
 
 For example:
-./packet_sniffer.py -i eth0 -f "tcp port 80" -o http_traffic.pcap -t tap0
+
+    ./packet_sniffer.py -i eth0 -f "tcp port 80" -o http_traffic.pcap -t tap0
 
 This will start SSLstrip on the eth0 interface, start the sniffer on the tap0 device, and only capture TCP packets on port 80, writing the packets to the http_traffic.pcap file.
 
